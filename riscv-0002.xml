@@ -7,12 +7,90 @@ show-heading="true"
 show-metadata="true"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>242</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>247</fr:anchor><fr:addr
 type="user">riscv-0002</fr:addr><fr:route>riscv-0002.xml</fr:route><fr:title
+text="General Registers">General Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>See <fr:link
+type="local"
+href="riscv-is-manual.xml"
+addr="riscv-is-manual"
+title="The RISC-V Instruction Set Manual">The RISC-V Instruction Set Manual</fr:link> Table 20.1: Assembler mnemonics for RISC-V integer and floating-point registers.</fr:p></fr:mainmatter><fr:backmatter><fr:tree
+toc="false"
+numbered="false"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title
+text="References">References</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>249</fr:anchor><fr:addr
+type="user">riscv-is-manual</fr:addr><fr:route>riscv-is-manual.xml</fr:route><fr:title
+text="The RISC-V Instruction Set Manual">The RISC-V Instruction Set Manual</fr:title><fr:taxon>Reference</fr:taxon><fr:authors><fr:author>Andrew Waterman, Krste Asanovic, SiFive Inc.</fr:author></fr:authors><fr:meta
+name="external">https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf</fr:meta></fr:frontmatter><fr:mainmatter /><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="false"
+numbered="false"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title
+text="Context">Context</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>251</fr:anchor><fr:addr
+type="user">riscv-0001</fr:addr><fr:route>riscv-0001.xml</fr:route><fr:title
 text="RISC-V Registers">RISC-V Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
 href="epoche.xml"
 addr="epoche"
-title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:strong>a0 - a7 :</fr:strong> (Argument registers) 
-    <fr:ul><fr:li><fr:strong>a7</fr:strong> hold the system call number.</fr:li>
-      <fr:li /></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree>
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>243</fr:anchor><fr:addr
+type="user">riscv-0002</fr:addr><fr:route>riscv-0002.xml</fr:route><fr:title
+text="General Registers">General Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>See <fr:link
+type="local"
+href="riscv-is-manual.xml"
+addr="riscv-is-manual"
+title="The RISC-V Instruction Set Manual">The RISC-V Instruction Set Manual</fr:link> Table 20.1: Assembler mnemonics for RISC-V integer and floating-point registers.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>245</fr:anchor><fr:addr
+type="user">riscv-0003</fr:addr><fr:route>riscv-0003.xml</fr:route><fr:title
+text="CSR (Control and Status Registers)">CSR (Control and Status Registers)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>20</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:ul><fr:li><fr:strong>Trap into Mode S</fr:strong>:
+    <fr:ul><fr:li><fr:strong>sstatus</fr:strong>: the <fr:strong>spp</fr:strong> segment record the mode before trap into mode S, (S/U).</fr:li>
+      <fr:li><fr:strong>sepc</fr:strong> record address of the last instruction before trapped into mode S.</fr:li>
+      <fr:li><fr:strong>stval, scause</fr:strong> record reason and attached information of this trap.</fr:li>
+      <fr:li><fr:strong>stvec</fr:strong> record the address of the trap handle code.</fr:li></fr:ul></fr:li>
+  <fr:li><fr:strong>Memory Map Unit</fr:strong>
+    <fr:ul><fr:li><fr:strong>satp</fr:strong> can control the mode of memory map: bare, Sv39, Sv48.</fr:li>
+      <fr:li /></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:backmatter></fr:tree>

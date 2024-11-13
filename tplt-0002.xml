@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="true"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>239</fr:anchor><fr:addr
+type="user">tplt-0002</fr:addr><fr:route>tplt-0002.xml</fr:route><fr:title
+text="Basic Usage">Basic Usage</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This <fr:link
+type="external"
+href="https://mariusbancila.ro/blog/2021/03/15/typename-or-class/">link</fr:link> explain the difference between <fr:code>template&lt;typename T&gt;</fr:code> and <fr:code>template&lt;class T&gt;</fr:code>.</fr:p><fr:strong>Specialized function:</fr:strong><fr:p>Create specialized templated functions, that do
+ different things for different types. Take the following contrived example,
+ which prints the type if its a float type, but just prints hello world for
+ all other types.
+
+<fr:pre><![CDATA[template <typename T>
+void print_msg() {
+  std::cout << "Hello world!\n";
+}]]></fr:pre></fr:p><fr:p>Specialized templated function, specialized on the float type.
+  
+<fr:pre><![CDATA[template <>
+void print_msg<float>() {
+  std::cout << "print_msg called with float type!\n";
+}]]></fr:pre></fr:p><fr:strong>Template parameters can also is a value:</fr:strong><fr:pre><![CDATA[template<int V>
+int f() {
+  return V;
+}]]></fr:pre><fr:p>Above behavior also work in classes.</fr:p></fr:mainmatter><fr:backmatter><fr:tree
+toc="false"
+numbered="false"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title
+text="Context">Context</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>241</fr:anchor><fr:addr
+type="user">tplt-0001</fr:addr><fr:route>tplt-0001.xml</fr:route><fr:title
+text="Templates in cpp">Templates in cpp</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>243</fr:anchor><fr:addr
+type="user">tplt-0002</fr:addr><fr:route>tplt-0002.xml</fr:route><fr:title
+text="Basic Usage">Basic Usage</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This <fr:link
+type="external"
+href="https://mariusbancila.ro/blog/2021/03/15/typename-or-class/">link</fr:link> explain the difference between <fr:code>template&lt;typename T&gt;</fr:code> and <fr:code>template&lt;class T&gt;</fr:code>.</fr:p><fr:strong>Specialized function:</fr:strong><fr:p>Create specialized templated functions, that do
+ different things for different types. Take the following contrived example,
+ which prints the type if its a float type, but just prints hello world for
+ all other types.
+
+<fr:pre><![CDATA[template <typename T>
+void print_msg() {
+  std::cout << "Hello world!\n";
+}]]></fr:pre></fr:p><fr:p>Specialized templated function, specialized on the float type.
+  
+<fr:pre><![CDATA[template <>
+void print_msg<float>() {
+  std::cout << "print_msg called with float type!\n";
+}]]></fr:pre></fr:p><fr:strong>Template parameters can also is a value:</fr:strong><fr:pre><![CDATA[template<int V>
+int f() {
+  return V;
+}]]></fr:pre><fr:p>Above behavior also work in classes.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:backmatter></fr:tree>

@@ -7,7 +7,7 @@ show-heading="true"
 show-metadata="true"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>359</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>375</fr:anchor><fr:addr
 type="user">sponge-0002</fr:addr><fr:route>sponge-0002.xml</fr:route><fr:title
 text="Sponge Lab 0: networking warmup">Sponge Lab 0: networking warmup</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -33,7 +33,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>361</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>377</fr:anchor><fr:addr
 type="user">sponge-0001</fr:addr><fr:route>sponge-0001.xml</fr:route><fr:title
 text="Sponge Lab Notes">Sponge Lab Notes</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -46,7 +46,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>319</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>251</fr:anchor><fr:addr
 type="user">sponge-0002</fr:addr><fr:route>sponge-0002.xml</fr:route><fr:title
 text="Sponge Lab 0: networking warmup">Sponge Lab 0: networking warmup</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -64,7 +64,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>321</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>253</fr:anchor><fr:addr
 type="user">sponge-0003</fr:addr><fr:route>sponge-0003.xml</fr:route><fr:title
 text="Sponge Lab 1: stitching substrings into a byte stream">Sponge Lab 1: stitching substrings into a byte stream</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -77,7 +77,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>323</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>255</fr:anchor><fr:addr
 type="user">sponge-0004</fr:addr><fr:route>sponge-0004.xml</fr:route><fr:title
 text="Sponge Lab 2: the TCP Receiver">Sponge Lab 2: the TCP Receiver</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -102,7 +102,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>325</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>257</fr:anchor><fr:addr
 type="user">sponge-0006</fr:addr><fr:route>sponge-0006.xml</fr:route><fr:title
 text="Sponge lab 3: the TCP Sender">Sponge lab 3: the TCP Sender</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>21</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -110,12 +110,27 @@ href="epoche.xml"
 addr="epoche"
 title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The TCP sender is another participant in the TCP connection at an endpoint. It's responsible for reading from the bytestream, spliting it into some segments that serve as the payload of the TCP segment, writing the SYN, FIN, and Sequence Number in the TCP segment header, and then conveying these TCP segments to another endpoint in the connection. When a segment has been sent, sender marks it as a outstanding segment, which means the segment has been sent but not acknowledged.
   
-  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
+  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments which marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
   <fr:ol><fr:li>Double the retransmission timeout and record the consecutive number of retransmission when window size is nonzero.</fr:li>
     <fr:li>Starting timer when sending a new segment.</fr:li>
     <fr:li>SYN and FIN flag also occupies a sequence number.</fr:li>
     <fr:li>Window size is the upper bound of bytes in flight.</fr:li>
-    <fr:li>Reject outdate and illegal acknowledgment number.</fr:li></fr:ol></fr:p><fr:p>Sender isn't hard to implement, but it's a little bit complicated.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:li>Reject outdate and illegal acknowledgment number.</fr:li></fr:ol></fr:p><fr:p>Sender isn't hard to implement, but it's a little bit complicated.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>259</fr:anchor><fr:addr
+type="user">sponge-0007</fr:addr><fr:route>sponge-0007.xml</fr:route><fr:title
+text="Sponge Lab 4: the TCP Connection">Sponge Lab 4: the TCP Connection</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>在实验2-3中，实现了发送者和接受。
+  
+  其中发送者读取字节流，将字节流截取为一个个 TCP 段，将 TCP 段发送至结构体内的队列中共上层结构使用，发送者会对 TCP 段的 fin，syn，标志进行修改，包括最初发送一个包含 syn 标志的段来进行三次握手的连接、当字节流到达文件尾时，发送包含 fin 标志的段来传递结束 TCP 连接。发送者还包括</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="false"
 numbered="false"
 show-heading="true"
@@ -130,7 +145,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>363</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>379</fr:anchor><fr:addr
 type="user">internet-0001</fr:addr><fr:route>internet-0001.xml</fr:route><fr:title
 text="TCP Socket">TCP Socket</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>26</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -148,7 +163,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>365</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>381</fr:anchor><fr:addr
 type="user">sponge-0004</fr:addr><fr:route>sponge-0004.xml</fr:route><fr:title
 text="Sponge Lab 2: the TCP Receiver">Sponge Lab 2: the TCP Receiver</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"

@@ -7,7 +7,7 @@ show-heading="true"
 show-metadata="true"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>385</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>401</fr:anchor><fr:addr
 type="user">epoche</fr:addr><fr:route>epoche.xml</fr:route><fr:title
 text="Epoche">Epoche</fr:title><fr:taxon>Person</fr:taxon><fr:authors /><fr:meta
 name="institution">Zhengzhou University of Light Industry</fr:meta><fr:meta
@@ -27,7 +27,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="true"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>386</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>402</fr:anchor><fr:addr
 type="user">epoche-0001</fr:addr><fr:route>index.xml</fr:route><fr:title
 text="Epoche's forest">Epoche's forest</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -62,7 +62,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>279</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>303</fr:anchor><fr:addr
 type="user">epoche-0002</fr:addr><fr:route>epoche-0002.xml</fr:route><fr:title
 text="Learning progress on evergreen notes in forester">Learning progress on evergreen notes in forester</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -88,7 +88,110 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>388</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>404</fr:anchor><fr:addr
+type="user">tplt-0002</fr:addr><fr:route>tplt-0002.xml</fr:route><fr:title
+text="Basic Usage">Basic Usage</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This <fr:link
+type="external"
+href="https://mariusbancila.ro/blog/2021/03/15/typename-or-class/">link</fr:link> explain the difference between <fr:code>template&lt;typename T&gt;</fr:code> and <fr:code>template&lt;class T&gt;</fr:code>.</fr:p><fr:strong>Specialized function:</fr:strong><fr:p>Create specialized templated functions, that do
+ different things for different types. Take the following contrived example,
+ which prints the type if its a float type, but just prints hello world for
+ all other types.
+
+<fr:pre><![CDATA[template <typename T>
+void print_msg() {
+  std::cout << "Hello world!\n";
+}]]></fr:pre></fr:p><fr:p>Specialized templated function, specialized on the float type.
+  
+<fr:pre><![CDATA[template <>
+void print_msg<float>() {
+  std::cout << "print_msg called with float type!\n";
+}]]></fr:pre></fr:p><fr:strong>Template parameters can also is a value:</fr:strong><fr:pre><![CDATA[template<int V>
+int f() {
+  return V;
+}]]></fr:pre><fr:p>Above behavior also work in classes.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>406</fr:anchor><fr:addr
+type="user">cpp-0001</fr:addr><fr:route>cpp-0001.xml</fr:route><fr:title
+text="Reference">Reference</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Reference is the alias of a variable, the aliases refer to a same data in the memory with the variable.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>408</fr:anchor><fr:addr
+type="user">sponge-0007</fr:addr><fr:route>sponge-0007.xml</fr:route><fr:title
+text="Sponge Lab 4: the TCP Connection">Sponge Lab 4: the TCP Connection</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>在实验2-3中，实现了发送者和接受。
+  
+  其中发送者读取字节流，将字节流截取为一个个 TCP 段，将 TCP 段发送至结构体内的队列中共上层结构使用，发送者会对 TCP 段的 fin，syn，标志进行修改，包括最初发送一个包含 syn 标志的段来进行三次握手的连接、当字节流到达文件尾时，发送包含 fin 标志的段来传递结束 TCP 连接。发送者还包括</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>410</fr:anchor><fr:addr
+type="user">tplt-0001</fr:addr><fr:route>tplt-0001.xml</fr:route><fr:title
+text="Templates in cpp">Templates in cpp</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>243</fr:anchor><fr:addr
+type="user">tplt-0002</fr:addr><fr:route>tplt-0002.xml</fr:route><fr:title
+text="Basic Usage">Basic Usage</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>This <fr:link
+type="external"
+href="https://mariusbancila.ro/blog/2021/03/15/typename-or-class/">link</fr:link> explain the difference between <fr:code>template&lt;typename T&gt;</fr:code> and <fr:code>template&lt;class T&gt;</fr:code>.</fr:p><fr:strong>Specialized function:</fr:strong><fr:p>Create specialized templated functions, that do
+ different things for different types. Take the following contrived example,
+ which prints the type if its a float type, but just prints hello world for
+ all other types.
+
+<fr:pre><![CDATA[template <typename T>
+void print_msg() {
+  std::cout << "Hello world!\n";
+}]]></fr:pre></fr:p><fr:p>Specialized templated function, specialized on the float type.
+  
+<fr:pre><![CDATA[template <>
+void print_msg<float>() {
+  std::cout << "print_msg called with float type!\n";
+}]]></fr:pre></fr:p><fr:strong>Template parameters can also is a value:</fr:strong><fr:pre><![CDATA[template<int V>
+int f() {
+  return V;
+}]]></fr:pre><fr:p>Above behavior also work in classes.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>412</fr:anchor><fr:addr
 type="user">riscv-0003</fr:addr><fr:route>riscv-0003.xml</fr:route><fr:title
 text="CSR (Control and Status Registers)">CSR (Control and Status Registers)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>20</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -100,15 +203,14 @@ title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mai
       <fr:li><fr:strong>stval, scause</fr:strong> record reason and attached information of this trap.</fr:li>
       <fr:li><fr:strong>stvec</fr:strong> record the address of the trap handle code.</fr:li></fr:ul></fr:li>
   <fr:li><fr:strong>Memory Map Unit</fr:strong>
-    <fr:ul><fr:li><fr:strong>satp</fr:strong> can control the mode of memory map: bare, Sv39, Sv48.</fr:li>
-      <fr:li /></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:ul><fr:li><fr:strong>satp</fr:strong> can control the mode of memory map: bare, Sv39, Sv48.</fr:li></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>390</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>414</fr:anchor><fr:addr
 type="user">riscv-0002</fr:addr><fr:route>riscv-0002.xml</fr:route><fr:title
 text="General Registers">General Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -125,7 +227,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>392</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>416</fr:anchor><fr:addr
 type="user">riscv-0001</fr:addr><fr:route>riscv-0001.xml</fr:route><fr:title
 text="RISC-V Registers">RISC-V Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -138,7 +240,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>243</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>267</fr:anchor><fr:addr
 type="user">riscv-0002</fr:addr><fr:route>riscv-0002.xml</fr:route><fr:title
 text="General Registers">General Registers</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>19</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -155,7 +257,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>245</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>269</fr:anchor><fr:addr
 type="user">riscv-0003</fr:addr><fr:route>riscv-0003.xml</fr:route><fr:title
 text="CSR (Control and Status Registers)">CSR (Control and Status Registers)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>20</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -167,21 +269,20 @@ title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mai
       <fr:li><fr:strong>stval, scause</fr:strong> record reason and attached information of this trap.</fr:li>
       <fr:li><fr:strong>stvec</fr:strong> record the address of the trap handle code.</fr:li></fr:ul></fr:li>
   <fr:li><fr:strong>Memory Map Unit</fr:strong>
-    <fr:ul><fr:li><fr:strong>satp</fr:strong> can control the mode of memory map: bare, Sv39, Sv48.</fr:li>
-      <fr:li /></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:ul><fr:li><fr:strong>satp</fr:strong> can control the mode of memory map: bare, Sv39, Sv48.</fr:li></fr:ul></fr:li></fr:ul></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>394</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>418</fr:anchor><fr:addr
 type="user">fstm-0004</fr:addr><fr:route>fstm-0004.xml</fr:route><fr:title
 text="Block Device">Block Device</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
 href="epoche.xml"
 addr="epoche"
-title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:pre><![CDATA[lass Disk {
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:pre><![CDATA[class Disk {
   // Logical Block Addressing (LBA)
   readSector(long n, void * buf);
   writeSector(long n, const void * buf);
@@ -192,7 +293,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>396</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>420</fr:anchor><fr:addr
 type="user">fstm-0002</fr:addr><fr:route>fstm-0002.xml</fr:route><fr:title
 text="File">File</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -210,7 +311,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>398</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>422</fr:anchor><fr:addr
 type="user">fstm-0003</fr:addr><fr:route>fstm-0003.xml</fr:route><fr:title
 text="Inode">Inode</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -225,7 +326,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>400</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>424</fr:anchor><fr:addr
 type="user">fstm-0001</fr:addr><fr:route>fstm-0001.xml</fr:route><fr:title
 text="Linux Filesystem">Linux Filesystem</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -238,7 +339,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>261</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>285</fr:anchor><fr:addr
 type="user">fstm-0002</fr:addr><fr:route>fstm-0002.xml</fr:route><fr:title
 text="File">File</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -256,7 +357,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>263</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>287</fr:anchor><fr:addr
 type="user">fstm-0003</fr:addr><fr:route>fstm-0003.xml</fr:route><fr:title
 text="Inode">Inode</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -271,13 +372,13 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>265</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>289</fr:anchor><fr:addr
 type="user">fstm-0004</fr:addr><fr:route>fstm-0004.xml</fr:route><fr:title
 text="Block Device">Block Device</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
 href="epoche.xml"
 addr="epoche"
-title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:pre><![CDATA[lass Disk {
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:pre><![CDATA[class Disk {
   // Logical Block Addressing (LBA)
   readSector(long n, void * buf);
   writeSector(long n, const void * buf);
@@ -288,7 +389,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>402</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>426</fr:anchor><fr:addr
 type="user">rust-0002</fr:addr><fr:route>rust-0002.xml</fr:route><fr:title
 text="Lifetime">Lifetime</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -301,7 +402,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>404</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>428</fr:anchor><fr:addr
 type="user">rust-0001</fr:addr><fr:route>rust-0001.xml</fr:route><fr:title
 text="Rustlings notes">Rustlings notes</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -314,7 +415,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>285</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>309</fr:anchor><fr:addr
 type="user">rust-0003</fr:addr><fr:route>rust-0003.xml</fr:route><fr:title
 text="Where clauses and Trait Bound">Where clauses and Trait Bound</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -329,7 +430,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>287</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>311</fr:anchor><fr:addr
 type="user">rust-0002</fr:addr><fr:route>rust-0002.xml</fr:route><fr:title
 text="Lifetime">Lifetime</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -342,7 +443,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>406</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>430</fr:anchor><fr:addr
 type="user">rust-0003</fr:addr><fr:route>rust-0003.xml</fr:route><fr:title
 text="Where clauses and Trait Bound">Where clauses and Trait Bound</fr:title><fr:date><fr:year>2024</fr:year><fr:month>10</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -357,7 +458,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>408</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr
 type="user">internet-0001</fr:addr><fr:route>internet-0001.xml</fr:route><fr:title
 text="TCP Socket">TCP Socket</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>26</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -375,7 +476,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>410</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>434</fr:anchor><fr:addr
 type="user">move-0001</fr:addr><fr:route>move-0001.xml</fr:route><fr:title
 text="Move Semantics in cpp">Move Semantics in cpp</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>22</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -386,7 +487,9 @@ type="external"
 href="https://github.com/suspenss/Sponge/blob/master/libsponge/util/buffer.hh">cs144 libsponge buffer header</fr:link> has a very strange constructor that I never seen before:
 
   <fr:pre><![CDATA[Buffer(std::string &&str) noexcept
-    : _storage(std::make_shared<std::string>(std::move(str))) {}]]></fr:pre>
+  : _storage(
+    std::make_shared<std::string>(std::move(str))
+    ) {}]]></fr:pre>
 
   When I'm trying to construct a buffer using <fr:code>Buffer payload = Buffer(str);</fr:code>, it doesn't work. So I searched this question on the web and I finally found that correct way to use the constructor is <fr:code>Buffer payload = Buffer(std::move(str));</fr:code>. So I'm going to make some notes about "<fr:strong>Move Semantics</fr:strong>".</fr:p><fr:tree
 toc="true"
@@ -395,7 +498,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>301</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>325</fr:anchor><fr:addr
 type="user">move-0002</fr:addr><fr:route>move-0002.xml</fr:route><fr:title
 text="Value Categories">Value Categories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>22</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -403,27 +506,27 @@ href="epoche.xml"
 addr="epoche"
 title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Before C++11, this language has only two kinds of value: lvalue and rvalue. And only lvalue has reference.
   <fr:ul><fr:li><fr:strong>lvalue</fr:strong>: lvalue is an object that can get its address like variable and array.</fr:li>
-    <fr:li><fr:strong>rvalue</fr:strong>: rvalue is an object that can't get its address like literal and temporary variable.</fr:li></fr:ul></fr:p><fr:p>C++11 adds the rvalue reference, we can use <fr:code>Type&amp;&amp;</fr:code> to make a rvalue reference. Rvalue reference binds the rvalue object rather than copy it, while the object that be binded will be destoryed.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:li><fr:strong>rvalue</fr:strong>: rvalue is an object that can't get its address like temporary variable (rvalues are anything that is not a lvalue).</fr:li></fr:ul></fr:p><fr:p>C++11 adds the rvalue reference, we can use <fr:code>Type&amp;&amp;</fr:code> to make a rvalue reference. Rvalue reference binds the rvalue object rather than copy it, while the object that be binded will be destoryed. Rvalue reference is a 'lvalue' in a experssion.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="true"
 show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>303</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>327</fr:anchor><fr:addr
 type="user">move-0003</fr:addr><fr:route>move-0003.xml</fr:route><fr:title
 text="The std::move function">The std::move function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>22</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
 href="epoche.xml"
 addr="epoche"
-title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:code>std::move</fr:code> is a function template in cpp standred library. It converts a lvalue to rvalue reference.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:code>std::move</fr:code> is a template function in <fr:code>&lt;utility&gt;</fr:code> header of cpp standred library. It converts a lvalue or creates a experssion to a rvalue.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:p>In pratical, move semantics is useful deal with the object with large memory allocation. In numeric type, move is unnecessary.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>412</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>436</fr:anchor><fr:addr
 type="user">move-0002</fr:addr><fr:route>move-0002.xml</fr:route><fr:title
 text="Value Categories">Value Categories</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>22</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -431,27 +534,27 @@ href="epoche.xml"
 addr="epoche"
 title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>Before C++11, this language has only two kinds of value: lvalue and rvalue. And only lvalue has reference.
   <fr:ul><fr:li><fr:strong>lvalue</fr:strong>: lvalue is an object that can get its address like variable and array.</fr:li>
-    <fr:li><fr:strong>rvalue</fr:strong>: rvalue is an object that can't get its address like literal and temporary variable.</fr:li></fr:ul></fr:p><fr:p>C++11 adds the rvalue reference, we can use <fr:code>Type&amp;&amp;</fr:code> to make a rvalue reference. Rvalue reference binds the rvalue object rather than copy it, while the object that be binded will be destoryed.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:li><fr:strong>rvalue</fr:strong>: rvalue is an object that can't get its address like temporary variable (rvalues are anything that is not a lvalue).</fr:li></fr:ul></fr:p><fr:p>C++11 adds the rvalue reference, we can use <fr:code>Type&amp;&amp;</fr:code> to make a rvalue reference. Rvalue reference binds the rvalue object rather than copy it, while the object that be binded will be destoryed. Rvalue reference is a 'lvalue' in a experssion.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>414</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>438</fr:anchor><fr:addr
 type="user">move-0003</fr:addr><fr:route>move-0003.xml</fr:route><fr:title
 text="The std::move function">The std::move function</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>22</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
 href="epoche.xml"
 addr="epoche"
-title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:code>std::move</fr:code> is a function template in cpp standred library. It converts a lvalue to rvalue reference.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p><fr:code>std::move</fr:code> is a template function in <fr:code>&lt;utility&gt;</fr:code> header of cpp standred library. It converts a lvalue or creates a experssion to a rvalue.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>416</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>440</fr:anchor><fr:addr
 type="user">sponge-0006</fr:addr><fr:route>sponge-0006.xml</fr:route><fr:title
 text="Sponge lab 3: the TCP Sender">Sponge lab 3: the TCP Sender</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>21</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -459,7 +562,7 @@ href="epoche.xml"
 addr="epoche"
 title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The TCP sender is another participant in the TCP connection at an endpoint. It's responsible for reading from the bytestream, spliting it into some segments that serve as the payload of the TCP segment, writing the SYN, FIN, and Sequence Number in the TCP segment header, and then conveying these TCP segments to another endpoint in the connection. When a segment has been sent, sender marks it as a outstanding segment, which means the segment has been sent but not acknowledged.
   
-  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
+  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments which marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
   <fr:ol><fr:li>Double the retransmission timeout and record the consecutive number of retransmission when window size is nonzero.</fr:li>
     <fr:li>Starting timer when sending a new segment.</fr:li>
     <fr:li>SYN and FIN flag also occupies a sequence number.</fr:li>
@@ -471,7 +574,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>418</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>442</fr:anchor><fr:addr
 type="user">sponge-0004</fr:addr><fr:route>sponge-0004.xml</fr:route><fr:title
 text="Sponge Lab 2: the TCP Receiver">Sponge Lab 2: the TCP Receiver</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -496,7 +599,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>420</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>444</fr:anchor><fr:addr
 type="user">sponge-0005</fr:addr><fr:route>sponge-0005.xml</fr:route><fr:title
 text="TCP Segment">TCP Segment</fr:title><fr:taxon>Figure</fr:taxon><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -514,7 +617,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>422</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>446</fr:anchor><fr:addr
 type="user">ocmst-0004</fr:addr><fr:route>ocmst-0004.xml</fr:route><fr:title
 text="Insertion (Okaskaki's algorithm)">Insertion (Okaskaki's algorithm)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -583,7 +686,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>424</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>448</fr:anchor><fr:addr
 type="user">ocmst-0003</fr:addr><fr:route>ocmst-0003.xml</fr:route><fr:title
 text="Red-Black Tree">Red-Black Tree</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -601,7 +704,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>345</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>361</fr:anchor><fr:addr
 type="user">ocmst-0004</fr:addr><fr:route>ocmst-0004.xml</fr:route><fr:title
 text="Insertion (Okaskaki's algorithm)">Insertion (Okaskaki's algorithm)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -670,7 +773,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>426</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>450</fr:anchor><fr:addr
 type="user">sponge-0001</fr:addr><fr:route>sponge-0001.xml</fr:route><fr:title
 text="Sponge Lab Notes">Sponge Lab Notes</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -683,7 +786,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>319</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>251</fr:anchor><fr:addr
 type="user">sponge-0002</fr:addr><fr:route>sponge-0002.xml</fr:route><fr:title
 text="Sponge Lab 0: networking warmup">Sponge Lab 0: networking warmup</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -701,7 +804,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>321</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>253</fr:anchor><fr:addr
 type="user">sponge-0003</fr:addr><fr:route>sponge-0003.xml</fr:route><fr:title
 text="Sponge Lab 1: stitching substrings into a byte stream">Sponge Lab 1: stitching substrings into a byte stream</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -714,7 +817,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>323</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>255</fr:anchor><fr:addr
 type="user">sponge-0004</fr:addr><fr:route>sponge-0004.xml</fr:route><fr:title
 text="Sponge Lab 2: the TCP Receiver">Sponge Lab 2: the TCP Receiver</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>18</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -739,7 +842,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>325</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>257</fr:anchor><fr:addr
 type="user">sponge-0006</fr:addr><fr:route>sponge-0006.xml</fr:route><fr:title
 text="Sponge lab 3: the TCP Sender">Sponge lab 3: the TCP Sender</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>21</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -747,19 +850,34 @@ href="epoche.xml"
 addr="epoche"
 title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>The TCP sender is another participant in the TCP connection at an endpoint. It's responsible for reading from the bytestream, spliting it into some segments that serve as the payload of the TCP segment, writing the SYN, FIN, and Sequence Number in the TCP segment header, and then conveying these TCP segments to another endpoint in the connection. When a segment has been sent, sender marks it as a outstanding segment, which means the segment has been sent but not acknowledged.
   
-  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
+  Sender's retransmission depend on the acknowledgment number, when no segment has been acknowledged, sender resends the earliest outstanding segment if enough time passed since it was sent. Once the acknowledgment number is received, sender compares it to the previous ack number, and if the received is greater than previous number, sender will sweep segments which marked as outstanding and send some new segments to fill the flow window.</fr:p><fr:p>There are lots of details to note:
   <fr:ol><fr:li>Double the retransmission timeout and record the consecutive number of retransmission when window size is nonzero.</fr:li>
     <fr:li>Starting timer when sending a new segment.</fr:li>
     <fr:li>SYN and FIN flag also occupies a sequence number.</fr:li>
     <fr:li>Window size is the upper bound of bytes in flight.</fr:li>
-    <fr:li>Reject outdate and illegal acknowledgment number.</fr:li></fr:ol></fr:p><fr:p>Sender isn't hard to implement, but it's a little bit complicated.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+    <fr:li>Reject outdate and illegal acknowledgment number.</fr:li></fr:ol></fr:p><fr:p>Sender isn't hard to implement, but it's a little bit complicated.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>259</fr:anchor><fr:addr
+type="user">sponge-0007</fr:addr><fr:route>sponge-0007.xml</fr:route><fr:title
+text="Sponge Lab 4: the TCP Connection">Sponge Lab 4: the TCP Connection</fr:title><fr:date><fr:year>2024</fr:year><fr:month>11</fr:month><fr:day>13</fr:day></fr:date><fr:authors><fr:author><fr:link
+type="local"
+href="epoche.xml"
+addr="epoche"
+title="Epoche">Epoche</fr:link></fr:author></fr:authors></fr:frontmatter><fr:mainmatter><fr:p>在实验2-3中，实现了发送者和接受。
+  
+  其中发送者读取字节流，将字节流截取为一个个 TCP 段，将 TCP 段发送至结构体内的队列中共上层结构使用，发送者会对 TCP 段的 fin，syn，标志进行修改，包括最初发送一个包含 syn 标志的段来进行三次握手的连接、当字节流到达文件尾时，发送包含 fin 标志的段来传递结束 TCP 连接。发送者还包括</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
 toc="true"
 numbered="false"
 show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>428</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>452</fr:anchor><fr:addr
 type="user">sponge-0002</fr:addr><fr:route>sponge-0002.xml</fr:route><fr:title
 text="Sponge Lab 0: networking warmup">Sponge Lab 0: networking warmup</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -777,7 +895,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>430</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>454</fr:anchor><fr:addr
 type="user">sponge-0003</fr:addr><fr:route>sponge-0003.xml</fr:route><fr:title
 text="Sponge Lab 1: stitching substrings into a byte stream">Sponge Lab 1: stitching substrings into a byte stream</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -790,7 +908,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>432</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>456</fr:anchor><fr:addr
 type="user">ocmst-0002</fr:addr><fr:route>ocmst-0002.xml</fr:route><fr:title
 text="Binary Search Tree">Binary Search Tree</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -861,7 +979,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="true"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>434</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>458</fr:anchor><fr:addr
 type="user">epoche-0001</fr:addr><fr:route>index.xml</fr:route><fr:title
 text="Epoche's forest">Epoche's forest</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -896,7 +1014,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>279</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>303</fr:anchor><fr:addr
 type="user">epoche-0002</fr:addr><fr:route>epoche-0002.xml</fr:route><fr:title
 text="Learning progress on evergreen notes in forester">Learning progress on evergreen notes in forester</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -914,7 +1032,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>436</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>460</fr:anchor><fr:addr
 type="user">ocmst-0001</fr:addr><fr:route>ocmst-0001.xml</fr:route><fr:title
 text="Functional Red-Black Tree Implementation">Functional Red-Black Tree Implementation</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -927,7 +1045,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>351</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>367</fr:anchor><fr:addr
 type="user">ocmst-0002</fr:addr><fr:route>ocmst-0002.xml</fr:route><fr:title
 text="Binary Search Tree">Binary Search Tree</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -998,7 +1116,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>353</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>369</fr:anchor><fr:addr
 type="user">ocmst-0003</fr:addr><fr:route>ocmst-0003.xml</fr:route><fr:title
 text="Red-Black Tree">Red-Black Tree</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -1016,7 +1134,7 @@ show-heading="true"
 show-metadata="false"
 expanded="true"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>345</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>361</fr:anchor><fr:addr
 type="user">ocmst-0004</fr:addr><fr:route>ocmst-0004.xml</fr:route><fr:title
 text="Insertion (Okaskaki's algorithm)">Insertion (Okaskaki's algorithm)</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>17</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"
@@ -1085,7 +1203,7 @@ show-heading="true"
 show-metadata="true"
 expanded="false"
 root="false"
-xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>438</fr:anchor><fr:addr
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>462</fr:anchor><fr:addr
 type="user">epoche-0002</fr:addr><fr:route>epoche-0002.xml</fr:route><fr:title
 text="Learning progress on evergreen notes in forester">Learning progress on evergreen notes in forester</fr:title><fr:date><fr:year>2024</fr:year><fr:month>9</fr:month><fr:day>16</fr:day></fr:date><fr:authors><fr:author><fr:link
 type="local"

@@ -1,0 +1,12 @@
+\date{2024-10-18}
+\title{Inode}
+\author{epoche}
+
+\p{
+Index Node is unique within a filesystem, but in a filesystem, maybe two or more directory entries could point to the same index node called \strong{hard-link}.
+
+\pre\verb<<<|
+path -> inode -> (file content / file metadata)
+<<<
+
+}

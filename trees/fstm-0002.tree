@@ -1,0 +1,15 @@
+\date{2024-10-18}
+\title{File}
+\author{epoche}
+
+\p{
+  Filesystem just like a map which key is the path name, value is the file content: 
+\pre\verb<<<|
+struct File {
+  mode (permissions, type), size, user, group,
+  timestamps (atime, mtime, ctime),
+  content (bytes)
+};
+<<<
+}
+

@@ -1,0 +1,20 @@
+\date{2024-10-20}
+\title{CSR (Control and Status Registers)}
+\author{epoche}
+
+\ul{
+  \li{\strong{Trap into Mode S}:
+    \ul{
+      \li{\strong{sstatus}: the \strong{spp} segment record the mode before trap into mode S, (S/U).}
+      \li{\strong{sepc} record address of the last instruction before trapped into mode S.}
+      \li{\strong{stval, scause} record reason and attached information of this trap.}
+      \li{\strong{stvec} record the address of the trap handle code.}
+    }
+  }
+  \li{
+    \strong{Memory Map Unit}
+    \ul{
+      \li{\strong{satp} can control the mode of memory map: bare, Sv39, Sv48.}
+    }
+  }
+}

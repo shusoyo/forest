@@ -1,0 +1,11 @@
+\date{2024-11-14}
+\title{RAII}
+\author{epoche}
+
+\p{
+  Some ref: 
+  
+  [https://en.cppreference.com/w/cpp/language/raii](https://en.cppreference.com/w/cpp/language/raii) 
+  
+  [https://stackoverflow.com/questions/2321511/what-is-meant-by-resource-acquisition-is-initialization-raii](https://stackoverflow.com/questions/2321511/what-is-meant-by-resource-acquisition-is-initialization-raii)
+}

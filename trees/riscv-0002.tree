@@ -1,0 +1,7 @@
+\title{General Registers}
+\author{epoche}
+\date{2024-10-19}
+
+\p{ 
+  See [[riscv-is-manual]] Table 20.1: Assembler mnemonics for RISC-V integer and floating-point registers.
+}

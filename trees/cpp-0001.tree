@@ -1,0 +1,13 @@
+\date{2024-11-13}
+\title{Language Quick Notes of cpp}
+\author{epoche}
+
+\p{
+  Reference is the alias of a variable, the aliases refer to a same data in the memory with the variable.
+}
+
+\transclude{move-0001}
+
+\transclude{tplt-0001}
+
+\transclude{raii-0001}

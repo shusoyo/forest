@@ -1,0 +1,47 @@
+\date{2024-11-13}
+\title{Basic Usage}
+\author{epoche}
+
+\p{
+  This [link](https://mariusbancila.ro/blog/2021/03/15/typename-or-class/) explain the difference between \code{template<typename T>} and \code{template<class T>}.
+
+}
+
+
+\strong{Specialized function:}
+\p{
+  Create specialized templated functions, that do
+ different things for different types. Take the following contrived example,
+ which prints the type if its a float type, but just prints hello world for
+ all other types.
+
+\pre\verb<<<|
+template <typename T>
+void print_msg() {
+  std::cout << "Hello world!\n";
+}
+<<<
+}
+
+\p{
+  Specialized templated function, specialized on the float type.
+  
+\pre\verb<<<|
+template <>
+void print_msg<float>() {
+  std::cout << "print_msg called with float type!\n";
+}
+<<<
+}
+
+\strong{Template parameters can also is a value: }
+\pre\verb<<<|
+template<int V>
+int f() {
+  return V;
+}
+<<<
+
+\p{
+  Above behavior also work in classes.
+}
